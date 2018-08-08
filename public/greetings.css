@@ -1,0 +1,43 @@
+*{
+  text-align: center;
+}
+a,#home {
+  text-decoration: none;
+  color: olivedrab;
+}
+textarea{
+  text-align:left;
+}
+
+.output{
+  font-size:3em;
+}
+
+.counter{
+  font-size:3em;
+}
+.table-box {
+  width:100%;
+}
+.table-box table {
+  width:80%;
+}
+table, th, td{
+  padding:20px;
+  margin:0 auto;
+}
+
+table {
+  text-align: center;
+  padding: 15em;
+  margin: 0 auto;
+}
+
+.ten.columns {
+  text-align: center;
+  
+}
+
+.row {
+  margin: 0 auto;
+}
