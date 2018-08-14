@@ -25,7 +25,7 @@ module.exports = function (pool) {
     let result = await pool.query('select * from users')
     return result.rows
   }
-  
+
   return {
     greet: greetings,
     getCounter: counter,
