@@ -1,43 +1,47 @@
-*{
+body {
+  background-color: #fff;
   text-align: center;
 }
-a,#home {
+a {
+  list-style: none; 
   text-decoration: none;
-  color: olivedrab;
 }
-textarea{
-  text-align:left;
-}
-
-.output{
-  font-size:3em;
-}
-
-.counter{
-  font-size:3em;
-}
-.table-box {
-  width:100%;
-}
-.table-box table {
-  width:80%;
-}
-table, th, td{
-  padding:20px;
-  margin:0 auto;
-}
-
-table {
-  text-align: center;
-  padding: 15em;
+.container {
   margin: 0 auto;
 }
 
-.ten.columns {
+.header {
+  color: black;
   text-align: center;
-  
 }
 
-.row {
-  margin: 0 auto;
+
+.form-section{
+  text-align: center;
+}
+
+input{
+  text-align: center;
+}
+
+span.label-body {
+  color: black;
+  font-size: 1.5em;
+}
+
+span {
+  font-size: 2.5em;
+}
+
+ul.greeted-users li{
+  list-style: none; 
+  text-decoration: none;
+  padding: 1em;
+  color: black;
+}
+
+ul.greeted-users a {
+  text-decoration: none;
+  padding: 2em;
+  color: black;
 }
