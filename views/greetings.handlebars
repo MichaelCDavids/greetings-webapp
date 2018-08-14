@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Greetings</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="skeleton.css">
+    <link rel="stylesheet" href="greetings.css">
+
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+
+<body>
+
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <div class="row">
+            <div class="ten columns header offset-by-one columns">
+                <a href="/">
+                    <h3>Greetings</h3>
+                </a>
+                <h6>Enter your name and choose your language</h6> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="ten columns"></div>
+            <form action="/greetings" method="post">
+                <div class="row">
+                    <div class="one-third column input-box offset-by-one-third column">
+                        <input id="firstName" name="name" class="name-box u-full-width" type="text" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="four columns" style="padding:40px">
+                        <label class="">
+                            <input type="radio" name="greetType" class="greetSettings" value="English">
+                            <span class="label-body">English</span>
+                        </label>
+                    </div>
+                    <div class="four columns" style="padding:40px">
+                        <label class="">
+                            <input type="radio" name="greetType" class="greetSettings" value="Afrikaans">
+                            <span class="label-body">Afrikaans</span>
+                        </label>
+                    </div>
+                    <div class="four columns" style="padding:40px">
+                        <label class="">
+                            <input type="radio" name="greetType" class="greetSettings" value="isiXhosa">
+                            <span class="label-body">isiXhosa</span>
+                        </label>
+                    </div>
+                    <button class="button button-primary" on type="submit" name="greet">Greet</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="twelve columns" style="margin-bottom: 50px;"> 
+                <strong>
+                    <span class="">{{data.greeting}}</span>
+                </strong>
+            </div>
+        </div>
+        <div class="greeted-users"style="margin-bottom: 50px;"><a href="/greeted">Greeted Users: {{data.tally}}</a></div>
+        
+    </div>
+</body>
+
+</html>
