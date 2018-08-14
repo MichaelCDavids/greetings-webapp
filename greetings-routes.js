@@ -1,24 +1,29 @@
 module.exports = function GreetingsRoutes (GreeterObject) {
-  function index (req, res) {
-    res.render('view')
+  async function index (req, res) {
+    let data = {
+      tally: await GreeterObject.getCounter()
+    }
+    res.render('home', {data})
   }
 
   async function greetings (req, res) {
     let language = req.body.greetType
     let name = req.body.name
 
-    let Greet = {
+    let data = {
       greeting: await GreeterObject.greet(name, language),
       tally: await GreeterObject.getCounter()
     }
-
-    res.render('view', {Greet})
+    res.render('greetings', {data})
   }
 
   async function greeted (req, res) {
-    let users = await GreeterObject.allUsers()
-    console.log(users);
-    res.render('greeted', {users})
+    
+    let data = {
+      users: await GreeterObject.allUsers(),
+      tally: await GreeterObject.getCounter()
+    }
+    res.render('greeted', {data})
   }
 
   return {
