@@ -1,7 +1,7 @@
 'use strict'
 
 const assert = require('assert')
-const GreetingsFactory = require('../GreetingsFactory')
+const GreetingsFactory = require('../greetings-factory')
 const pg = require('pg')
 const Pool = pg.Pool
 
