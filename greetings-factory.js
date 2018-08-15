@@ -24,7 +24,7 @@ module.exports = function (pool) {
       return 'Please select a language'
     }
   }
-
+  
   async function counter () {
     let result = await pool.query('select count (*) as user_count from users')
     return result.rows[0].user_count
@@ -41,10 +41,15 @@ module.exports = function (pool) {
     return result.rows[0]
   }
 
+  async function resetCounter () {
+    await pool.query('delete from users')
+  }
+
   return {
     greet: greetings,
     getCounter: counter,
     allUsers: greetedUsers,
-    getDetails: userDetails
+    getDetails: userDetails,
+    reset: resetCounter
   }
 }
