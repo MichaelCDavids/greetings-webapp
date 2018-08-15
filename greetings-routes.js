@@ -28,6 +28,9 @@ module.exports = function GreetingsRoutes (GreeterObject) {
   async function greetDetails (req, res) {
     let name = req.params.name
     let language = req.params.language
+    if (language === '' || language === undefined) {
+      language = 'English'
+    }
     let data = {
       greeting: await GreeterObject.greet(name, language),
       details: await GreeterObject.getDetails(name),

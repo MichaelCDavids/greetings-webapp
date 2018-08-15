@@ -45,6 +45,8 @@ app.post('/', greetingsRoutes.reset)
 
 app.get('/greeted', greetingsRoutes.greeted)
 
+app.get('/greeted/:name', greetingsRoutes.greetDetails)
+
 app.get('/greeted/:name/:language', greetingsRoutes.greetDetails)
 let PORT = process.env.PORT || 3007
 

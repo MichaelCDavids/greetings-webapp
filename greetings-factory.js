@@ -24,7 +24,7 @@ module.exports = function (pool) {
       return 'Please select a language'
     }
   }
-  
+
   async function counter () {
     let result = await pool.query('select count (*) as user_count from users')
     return result.rows[0].user_count
@@ -37,7 +37,6 @@ module.exports = function (pool) {
 
   async function userDetails (name) {
     let result = await pool.query('select * from users where name=$1', [name])
-    console.log(result.rows[0])
     return result.rows[0]
   }
 
