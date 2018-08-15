@@ -41,6 +41,8 @@ app.get('/', greetingsRoutes.index)
 
 app.post('/greetings', greetingsRoutes.greetings)
 
+app.post('/', greetingsRoutes.reset)
+
 app.get('/greeted', greetingsRoutes.greeted)
 
 app.get('/greeted/:name/:language', greetingsRoutes.greetDetails)
