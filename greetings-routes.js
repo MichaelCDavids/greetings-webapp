@@ -36,10 +36,16 @@ module.exports = function GreetingsRoutes (GreeterObject) {
     res.render('user', {data})
   }
 
+  async function reset (req, res) {
+    await GreeterObject.reset()
+    res.redirect('/')
+  }
+
   return {
     index,
     greetings,
     greeted,
-    greetDetails
+    greetDetails,
+    reset
   }
 }
