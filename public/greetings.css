@@ -2,10 +2,12 @@ body {
   background-color: #fff;
   text-align: center;
 }
+
 a {
-  list-style: none; 
+  list-style: none;
   text-decoration: none;
 }
+
 .container {
   margin: 0 auto;
 }
@@ -15,12 +17,11 @@ a {
   text-align: center;
 }
 
-
-.form-section{
+.form-section {
   text-align: center;
 }
 
-input{
+input {
   text-align: center;
 }
 
@@ -33,8 +34,8 @@ span {
   font-size: 2.5em;
 }
 
-ul.greeted-users li{
-  list-style: none; 
+ul.greeted-users li {
+  list-style: none;
   text-decoration: none;
   padding: 1em;
   color: black;
@@ -44,4 +45,12 @@ ul.greeted-users a {
   text-decoration: none;
   padding: 2em;
   color: black;
+}
+
+ul.usersDetails li {
+  height: 100px;
+  width: 100%;
+  list-style: none;
+  text-decoration: none;
+  margin-top: 2em;
 }
