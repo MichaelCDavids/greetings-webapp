@@ -1,7 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
-const greetings = require('./GreetingsFactory')
+const greetings = require('./greetings-factory')
 const GreetingsRoutes = require('./greetings-routes')
 const pg = require('pg')
 
@@ -43,6 +43,7 @@ app.post('/greetings', greetingsRoutes.greetings)
 
 app.get('/greeted', greetingsRoutes.greeted)
 
+app.get('/greeted/:name/:language', greetingsRoutes.greetDetails)
 let PORT = process.env.PORT || 3007
 
 app.listen(PORT, function () {
