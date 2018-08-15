@@ -40,7 +40,7 @@
                 <a href="/">
                     <h3>Greetings</h3>
                 </a>
-                <h6>Enter your name and choose your language</h6> 
+                <h6>Enter your name and choose your language</h6>
             </div>
         </div>
         <div class="row">
@@ -73,16 +73,19 @@
                     <button class="button button-primary" on type="submit" name="greet">Greet</button>
                 </div>
             </form>
+            <form action="/" method="post">
+                <button class="button button-primary" type="submit">Reset</button>
+            </form>
         </div>
         <div class="row">
-            <div class="twelve columns" style="margin-bottom: 50px;"> 
+            <div class="twelve columns" style="margin-bottom: 50px;">
                 <strong>
                     <span class="">{{data.greeting}}</span>
                 </strong>
             </div>
         </div>
-        <div class="greeted-users"style="margin-bottom: 50px;"><a href="/greeted">Greeted Users: {{data.tally}}</a></div>
-        
+        <div class="greeted-users" style="margin-bottom: 50px;"><a href="/greeted">Greeted Users: {{data.tally}}</a></div>
+
     </div>
 </body>
 
