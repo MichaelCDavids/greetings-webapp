@@ -40,13 +40,18 @@
                 <a href="/">
                     <h3>Greetings</h3>
                 </a>
-                <h6>Enter your name and choose your language</h6>
+                {{#if messages.info}}
+                <div class="ten columns offset-by-one columns entry">
+                    <p>{{messages.info}}</p>
+                </div>
+                {{/if}}
             </div>
         </div>
         <div class="row">
             <div class="ten columns"></div>
             <form action="/greetings" method="post">
                 <div class="row">
+                    <p>Enter your name and choose your language</p>
                     <div class="one-third column input-box offset-by-one-third column">
                         <input id="firstName" name="name" class="name-box u-full-width" type="text" />
                     </div>

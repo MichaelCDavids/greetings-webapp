@@ -17,11 +17,7 @@ module.exports = function (pool) {
         } else if (language === 'isiXhosa') {
           return 'Molo, ' + name
         }
-      } else {
-        return 'Please enter your name'
       }
-    } else {
-      return 'Please select a language'
     }
   }
 

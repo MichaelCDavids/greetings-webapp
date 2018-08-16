@@ -1,5 +1,6 @@
 body {
-  background-color: #fff;
+  margin: 10% 0 10% 0; 
+  background-image: url('./body-background.jpeg');
   text-align: center;
 }
 
@@ -9,11 +10,13 @@ a {
 }
 
 .container {
+  border-radius: 3em;
+  background-color: aliceblue;
   margin: 0 auto;
 }
 
 .header {
-  color: black;
+  padding: 3em;
   text-align: center;
 }
 
@@ -53,4 +56,22 @@ ul.usersDetails li {
   list-style: none;
   text-decoration: none;
   margin-top: 2em;
+}
+
+.someInput {
+  display: inline-flex;
+}
+
+.greeted-users {
+  margin: 30px;
+}
+
+.entry {
+  border: 1px solid aquamarine;
+  background-color: azure;
+  height: 45px;
+  color: cadetblue;
+}
+.entry p {
+  padding: 10px;
 }

@@ -1,3 +1,5 @@
+const flash = require('express-flash')
+const session = require('express-session')
 const express = require('express')
 const exphbs = require('express-handlebars')
 const bodyParser = require('body-parser')
@@ -21,7 +23,18 @@ const pool = new Pool({
   ssl: useSSL
 })
 
+
 let app = express()
+
+// initialise session middleware - flash-express depends on it
+app.use(session({
+  secret: 'This is a secret message',
+  resave: false,
+  saveUninitialized: true
+}))
+
+// initialise the flash middleware
+app.use(flash());
 
 let GreeterObject = greetings(pool)
 let greetingsRoutes = GreetingsRoutes(GreeterObject)

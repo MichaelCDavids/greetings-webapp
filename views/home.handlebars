@@ -36,18 +36,22 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="ten columns header offset-by-one columns">
-        <a href="/">
-          <h3>Greetings</h3>
-        </a>
-        <h6>Enter your name and choose your language</h6>
+      <div class="ten columns header offset-by-one columns header">
+        <a href="/"><h3>Greetings</h3></a>
+        {{#if messages.info}}
+        <div class="ten columns offset-by-one columns entry">
+          <p>{{messages.info}}</p>
+        </div>
+        {{/if}}
       </div>
     </div>
     <div class="row">
       <form action="/greetings" method="post">
         <div class="row">
-          <div class="one-third column input-box offset-by-one-third column">
+          <p>Enter your name and choose your language</p>
+          <div class="one-third column input-box offset-by-one-third column someInput">
             <input id="firstName" name="name" class="name-box u-full-width" type="text" />
+            <button class="button button-primary" on type="submit" name="greet">Greet</button>
           </div>
         </div>
         <div class="row">
@@ -70,8 +74,6 @@
             </label>
           </div>
         </div>
-        <button class="button button-primary" on type="submit" name="greet">Greet</button>
-
       </form>
       <form action="/" method="post">
         <button class="button button-primary" type="submit">Reset</button>

@@ -40,12 +40,12 @@
                 <a href="/">
                     <h3>Greetings</h3>
                 </a>
-                <h6>Enter your name and choose your language</h6>
             </div>
         </div>
         <div class="row">
             <form action="/greetings" method="post">
                 <div class="row">
+                    <h6>Enter your name and choose your language</h6>
                     <div class="one-third column input-box offset-by-one-third column">
                         <input id="firstName" name="name" class="name-box u-full-width" type="text" />
                     </div>
@@ -80,7 +80,13 @@
                 <a href="/greeted">Greeted Users: {{data.tally}} </a>
             </div>
         </div>
+
         <div class="container">
+            {{#if messages.info}}
+            <div class="ten columns offset-by-one columns entry">
+                <p>{{messages.info}}</p>
+            </div>
+            {{/if}}
             <div class="row">
                 <div class="twelve columns">
                     <ul class="greeted-users">
