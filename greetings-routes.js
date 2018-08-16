@@ -19,7 +19,7 @@ module.exports = function GreetingsRoutes(GreeterObject) {
       tally: await GreeterObject.getCounter()
     }
 
-    if (name === '' && name === undefined) {
+    if (name === '' || name === undefined) {
       req.flash('info', 'Please enter a valid name.')
     } else if (language === '' || language === undefined) {
       req.flash('info', 'Please select a language.')
@@ -45,14 +45,13 @@ module.exports = function GreetingsRoutes(GreeterObject) {
   async function greetDetails(req, res) {
     let name = req.params.name
     let language = req.params.language
-    if (language === '' || language === undefined) {
-      language = 'English'
-    }
+    
     let data = {
       greeting: await GreeterObject.greet(name, language),
       details: await GreeterObject.getDetails(name),
       tally: await GreeterObject.getCounter()
     }
+    req.flash('info', 'Details of greeted person.')
     res.render('user', {
       data
     })

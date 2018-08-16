@@ -69,7 +69,7 @@ ul.usersDetails li {
 .entry {
   border: 1px solid aquamarine;
   background-color: azure;
-  height: 45px;
+  height: auto;
   color: cadetblue;
 }
 .entry p {

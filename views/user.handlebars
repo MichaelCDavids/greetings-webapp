@@ -81,9 +81,6 @@
                     <strong>
                         <span class="">{{data.greeting}}</span>
                     </strong>
-                    <div class="entry">
-                        <h1> {{messages.reset}}</h1>
-                    </div>
                 </div>
             </div>
             <div class="greeted-users">
@@ -91,13 +88,19 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
+            {{#if messages.info}}
+            <div class="ten columns offset-by-one columns entry">
+                <p>{{messages.info}}</p>
+                <div class="row">
                 <div class="twelve columns">
                     <ul class="usersDetails">
                         <li>{{data.details.name}} has been greeted {{data.details.counter}} time(s)</li>
                     </ul>
                 </div>
             </div>
+            </div>
+            {{/if}}
+            
         </div>
     </div>
 </body>
