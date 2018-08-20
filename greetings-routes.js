@@ -48,7 +48,7 @@ module.exports = function GreetingsRoutes (GreeterObject) {
     }
 
     let data = {
-      greeting: await GreeterObject.greet(name, language),
+      // greeting: await GreeterObject.greet(name, language),
       details: await GreeterObject.getDetails(name),
       tally: await GreeterObject.getCounter()
     }
