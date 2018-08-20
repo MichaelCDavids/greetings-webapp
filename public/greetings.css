@@ -59,7 +59,7 @@ ul.usersDetails li {
 }
 
 .someInput {
-  display: inline-flex;
+  margin: 0 auto;
 }
 
 .greeted-users {
@@ -74,4 +74,29 @@ ul.usersDetails li {
 }
 .entry p {
   padding: 10px;
+}
+
+.inputName {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.submitInput {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nameButton {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+@media (max-width: 400px) {
+  .container{
+    width:80%;
+  }
+  .someInput {
+    display: inline-block;
+  }
 }

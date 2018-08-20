@@ -52,13 +52,12 @@ app.use(bodyParser.json())
 
 app.get('/', greetingsRoutes.index)
 
-app.post('/greetings', greetingsRoutes.greetings)
-
 app.post('/', greetingsRoutes.reset)
+app.post('/greetings', greetingsRoutes.greetings)
 
 app.get('/greeted', greetingsRoutes.greeted)
 
-app.get('/greeted/:name', greetingsRoutes.greetDetails)
+app.get('/counter/:name', greetingsRoutes.greetDetails)
 
 app.get('/greeted/:name/:language', greetingsRoutes.greetDetails)
 let PORT = process.env.PORT || 3007

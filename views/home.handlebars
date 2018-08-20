@@ -47,39 +47,40 @@
     </div>
     <div class="row">
       <form action="/greetings" method="post">
+        <p>Enter your name and choose your language</p>
         <div class="row">
-          <p>Enter your name and choose your language</p>
-          <div class="one-third column input-box offset-by-one-third column someInput">
-            <input id="firstName" name="name" class="name-box u-full-width" type="text" />
+          <div class="twelve columns someInput">
+            <input id="firstName" name="name" class="" type="text" />
             <button class="button button-primary" on type="submit" name="greet">Greet</button>
           </div>
         </div>
-        <div class="row">
-          <div class="four columns" style="padding:40px">
-            <label class="">
-              <input type="radio" name="greetType" class="greetSettings" value="English">
-              <span class="label-body">English</span>
-            </label>
-          </div>
-          <div class="four columns" style="padding:40px">
-            <label class="">
-              <input type="radio" name="greetType" class="greetSettings" value="Afrikaans">
-              <span class="label-body">Afrikaans</span>
-            </label>
-          </div>
-          <div class="four columns" style="padding:40px">
-            <label class="">
-              <input type="radio" name="greetType" class="greetSettings" value="isiXhosa">
-              <span class="label-body">isiXhosa</span>
-            </label>
-          </div>
-        </div>
-      </form>
-      <form action="/" method="post">
-        <button class="button button-primary" type="submit">Reset</button>
-      </form>
-      <div class="greeted-users"><a href="/greeted">Greeted Users: {{data.tally}} </a></div>
     </div>
+    <div class="row">
+      <div class="four columns" style="padding:40px">
+        <label class="">
+          <input type="radio" name="greetType" class="greetSettings" value="English">
+          <span class="label-body">English</span>
+        </label>
+      </div>
+      <div class="four columns" style="padding:40px">
+        <label class="">
+          <input type="radio" name="greetType" class="greetSettings" value="Afrikaans">
+          <span class="label-body">Afrikaans</span>
+        </label>
+      </div>
+      <div class="four columns" style="padding:40px">
+        <label class="">
+          <input type="radio" name="greetType" class="greetSettings" value="isiXhosa">
+          <span class="label-body">isiXhosa</span>
+        </label>
+      </div>
+    </div>
+    </form>
+    <form action="/" method="post">
+      <button class="button button-primary" type="submit">Reset</button>
+    </form>
+    <div class="greeted-users"><a href="/greeted">Greeted Users: {{data.tally}} </a></div>
+  </div>
   </div>
 </body>
 

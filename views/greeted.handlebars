@@ -45,9 +45,12 @@
         <div class="row">
             <form action="/greetings" method="post">
                 <div class="row">
-                    <h6>Enter your name and choose your language</h6>
-                    <div class="one-third column input-box offset-by-one-third column">
-                        <input id="firstName" name="name" class="name-box u-full-width" type="text" />
+                    <p>Enter your name and choose your language</p>
+                    <div class="row">
+                        <div class="twelve columns someInput">
+                            <input id="firstName" name="name" class="" type="text" />
+                            <button class="button button-primary" on type="submit" name="greet">Greet</button>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -70,8 +73,6 @@
                         </label>
                     </div>
                 </div>
-                <button class="button button-primary" on type="submit" name="greet">Greet</button>
-
             </form>
             <form action="/" method="post">
                 <button class="button button-primary" type="submit">Reset</button>
@@ -92,7 +93,7 @@
                     <ul class="greeted-users">
                         {{#each data.users}}
                         <li>
-                            <a href="greeted/{{this.name}}">{{this.name}} has been greeted {{this.counter}} time(s)</a>
+                            <a href="/counter/{{this.name}}">{{this.name}}</a>
                         </li>
                         {{/each}}
                     </ul>
