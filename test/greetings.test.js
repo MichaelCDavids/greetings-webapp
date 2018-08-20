@@ -42,7 +42,7 @@ describe('The Greetings-Webapp', function () {
       result = [{
         name: result[0].name,
         counter: result[0].counter
-      },{
+      }, {
         name: result[1].name,
         counter: result[1].counter
       }]
@@ -55,6 +55,22 @@ describe('The Greetings-Webapp', function () {
         counter: 1
       }
       ])
+    })
+  })
+  describe('The userDetails Function', function () {
+    it('should return an object that contains all the user information', async function () {
+      let greetingsFactory = GreetingsFactory(pool)
+      await greetingsFactory.greet('Mike', 'English')
+      await greetingsFactory.greet('Schtoo', 'English')
+      let result = await greetingsFactory.getDetails('Mike')
+      result = {
+        name: result.name,
+        counter: result.counter
+      }
+      assert.deepEqual(result, {
+        name: 'Mike',
+        counter: 1
+      })
     })
   })
 
