@@ -37,10 +37,11 @@
     <div class="container">
         <div class="row">
             <div class="ten columns header offset-by-one columns">
-                    <h3>User Details</h3>
+                <h3>User Details</h3>
             </div>
         </div>
-        {{!-- <div class="row">
+        {{!--
+        <div class="row">
             <form action="/greetings" method="post">
                 <div class="row">
                     <p>Enter your name and choose your language</p>
@@ -91,15 +92,16 @@
             <div class="ten columns offset-by-one columns entry">
                 <p>{{messages.info}}</p>
                 <div class="row">
-                <div class="twelve columns">
-                    <ul class="usersDetails">
-                        <li>{{data.details.name}} has been greeted {{data.details.counter}} time(s)</li>
-                    </ul>
+                    <div class="twelve columns">
+                        <ul class="usersDetails">
+                            <li>hello {{data.details.name}}, has been greeted {{data.details.counter}} time(s)</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+                <a href="/">back to home</a>
             </div>
             {{/if}}
-            
+
         </div>
     </div>
 </body>
